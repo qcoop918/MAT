@@ -14,24 +14,30 @@ app.get("/writeReadDelete", function (req, res) {
     let now = new Date()
     var err_flag = false
     for (let i = 0; i < 10; i++) {
-      fs.writeFileSync(path.join(__dirname, '/files/temp/'+now.getTime()+'_'+i+'.txt'), now.getTime()+'_'+i, err => {
+      let write = fs.writeFileSync(path.join(__dirname, now.getTime()+'_'+i+'.txt'), now.getTime()+'_'+i, err => {
         if (err) {
           err_flag = true
           console.log(err)
         }
       })
-      fs.readFileSync(path.join(__dirname, '/files/temp/'+now.getTime()+'_'+i+'.txt'), 'utf8', (err, data) =>{
+      let read = fs.readFileSync(path.join(__dirname, now.getTime()+'_'+i+'.txt'), 'utf8', (err, data) =>{
         if (err) {
           err_flag = true
           console.log(err)
         }
         console.log(data)
       })
-      fs.unlinkSync(path.join(__dirname, '/files/temp/'+now.getTime()+'_'+i+'.txt'), (err) => {
+      let del = fs.unlinkSync(path.join(__dirname, now.getTime()+'_'+i+'.txt'), (err) => {
         if (err){
           err_flag = true
           console.log(err)
         }
+	write
+	read
+	del
+	write.destroy()
+	read.destroy()
+	del.destroy()
       });
     }
     if(err_flag){
