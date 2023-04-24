@@ -20,11 +20,10 @@ app.get("/writeReadDelete", function (req, res) {
       fs.unlinkSync(path.join(__dirname, now.getTime() + '_' + i + '.txt'))
       readArray.push(read)
     }
-    read = null
-    readArray = null
   res.statuscode = 200
   res.send("Jobs done " + readArray)
-
+  read = null
+  readArray = null
   }
 });
 
