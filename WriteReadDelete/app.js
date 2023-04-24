@@ -11,9 +11,9 @@ app.get("/writeReadDelete", function (req, res) {
     res.send('Unauthorized');
   }
   else {
-    let now = new Date()
-    let readArray = []
-    let read
+    var now = new Date()
+    var readArray = []
+    var read
     for (let i = 0; i < 10; i++) {
       fs.writeFileSync(path.join(__dirname, now.getTime() + '_' + i + '.txt'), now.getTime() + '_' + i)
       read = fs.readFileSync(path.join(__dirname, now.getTime() + '_' + i + '.txt'), 'utf8')
