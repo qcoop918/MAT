@@ -15,7 +15,7 @@ app.get("/", function (req, res) {
 
 app.get("/writeReadDelete", proxy('writereaddelete:8083/writeReadDelete'))
 
-app.get("/bubble", proxy('writereaddelete:8082/bubble'))
+app.get("/bubble", proxy('bubble:8082/bubble'))
 
 app.get("/bogo", proxy('bogo:8081/bogo'))
 
