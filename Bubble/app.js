@@ -10,12 +10,12 @@ app.get("/bubble", function (req, res) {
   else {
     // This is our unsorted array
     var arr = [];
-    for (let i = 0; i < 1000; i++) {
+    for (let i = 0; i < 1000000; i++) {
       arr.push(Math.random())
     }
-
+    arr = bblSort(arr)
     // Now pass this array to the bblSort() function
-    res.send("Sorted Array Elements: " + bblSort(arr))
+    res.send("Sorted Array Elements: " + arr[0] + ", " + arr[1] + ", " + arr[2])
   }
 });
 
