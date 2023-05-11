@@ -1,0 +1,16 @@
+{
+  "name": "bubble",
+  "version": "1.0.0",
+  "description": "Bubble Service for MAT",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Quinn Cooper",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22"
+  }
+}
