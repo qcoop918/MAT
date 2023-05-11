@@ -5,4 +5,4 @@ RUN npm install
 COPY . /app
 CMD node app.js
 
-EXPOSE 8081
+EXPOSE 8082
