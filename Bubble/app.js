@@ -15,7 +15,7 @@ app.get("/bubble", function (req, res) {
     }
     arr = bblSort(arr)
     // Now pass this array to the bblSort() function
-    res.send("Sorted Array Elements: " + arr[0] + ", " + arr[1] + ", " + arr[2])
+    res.send("Seed: "+ seed +" Sorted Array Elements: " + arr[0] + ", " + arr[1] + ", " + arr[2])
   }
 });
 
