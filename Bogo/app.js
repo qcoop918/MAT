@@ -29,7 +29,7 @@ function Bogosort(arr) {
     var count = arr.length, temp, index;
 
     while (count > 0) {
-      index = Math.floor(Math.random() * count);
+      index = Math.floor(random() * count);
       count--;
 
       temp = arr[count];
@@ -38,6 +38,12 @@ function Bogosort(arr) {
     }
 
     return arr;
+  }
+
+  var seed = 1;
+  function random() {
+    var x = Math.sin(seed++) * 10000;
+    return x - Math.floor(x);
   }
 
   function sort(arr) {
