@@ -40,7 +40,7 @@ function Bogosort(arr) {
     return arr;
   }
 
-  var seed = 1;
+  var seed = 9;
   function random() {
     var x = Math.sin(seed) * 10000;
     return x - Math.floor(x);
