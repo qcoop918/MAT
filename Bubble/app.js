@@ -19,7 +19,7 @@ app.get("/bubble", function (req, res) {
   }
 });
 
-var seed = 9;
+var seed = 3000;
 function random() {
     var x = Math.sin(seed) * 10000;
     return x - Math.floor(x);
