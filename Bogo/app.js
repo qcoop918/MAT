@@ -11,7 +11,7 @@ app.get("/bogo", function (req, res) {
     var arra = [3, 0, 2, 5, -1, 4, 1];
     //res.send('Authorized Account Number: ' + Math.random()*1000 );
     //res.send("Original Array Elements: " + arra );
-    res.send("Seed: " + seed +  " Sorted Array Elements: " + Bogosort(arra))
+    res.send("Seed: " + seed + " Sorted Array Elements: " + Bogosort(arra))
   }
 });
 
@@ -40,12 +40,6 @@ function Bogosort(arr) {
     return arr;
   }
 
-  var seed = 3000;
-  function random() {
-    var x = Math.sin(seed++) * 10000;
-    return x - Math.floor(x);
-  }
-
   function sort(arr) {
     var sorted = false;
     while (!sorted) {
@@ -56,6 +50,12 @@ function Bogosort(arr) {
   }
 
   return sort(arr);
+}
+
+var seed = 3000;
+function random() {
+  var x = Math.sin(seed) * 10000;
+  return x - Math.floor(x);
 }
 
 
