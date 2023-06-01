@@ -10,7 +10,7 @@ app.get("/bubble", function (req, res) {
   else {
     // This is our unsorted array
     var arr = [];
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 1000; i++) {
       arr.push(random())
     }
     arr = bblSort(arr)
