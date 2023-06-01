@@ -11,7 +11,7 @@ app.get("/bubble", function (req, res) {
     // This is our unsorted array
     var arr = [];
     for (let i = 0; i < 1000; i++) {
-      arr.push(random())
+      arr.push(random(i))
     }
     arr = bblSort(arr)
     // Now pass this array to the bblSort() function
@@ -20,8 +20,8 @@ app.get("/bubble", function (req, res) {
 });
 
 var seed = 3000;
-function random() {
-    var x = Math.sin(seed) * 10000;
+function random(i) {
+    var x = Math.sin(seed+i) * 10000;
     return x - Math.floor(x);
 }
 
