@@ -40,8 +40,8 @@ function Bogosort(arr) {
 
     return arr;
   }
-  function fakeShuffle(i){
-    if(i<1000){
+  function fakeShuffle(l){
+    if(l<200){
       arr = [1,0]
       for(let i = 0; i < 2000; i++){
         arr.push[i]
