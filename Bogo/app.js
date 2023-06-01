@@ -41,13 +41,16 @@ function Bogosort(arr) {
     return arr;
   }
   function fakeShuffle(i){
-    if(i<1000){
-      [1,0]
+    if(i<100){
+      arr = [1,0]
+      for(let i = 0; i < 2000; i++){
+        arr.push[i]
+      }
     }
     else{
-      [0,1]
+      arr = [0,1]
     }
-    return arr[i]
+    return arr
   }
 
   function sort(arr) {
