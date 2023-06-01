@@ -9,7 +9,7 @@ app.get("/bogo", function (req, res) {
   }
   else {
     //var arra = [3, 0, 2, 5, -1, 4, 1];
-    var arra = [1,2,3,4,5,6,7];
+    var arra = [7,1,2,3,4,5,6];
     //res.send('Authorized Account Number: ' + Math.random()*1000 );
     //res.send("Original Array Elements: " + arra );
     res.send("Seed: " + seed + " Sorted Array Elements: " + Bogosort(arra))
@@ -40,12 +40,24 @@ function Bogosort(arr) {
 
     return arr;
   }
+  function fakeShuffle(i){
+    if(i<1000){
+      [1,0]
+    }
+    else{
+      [0,1]
+    }
+    return arr[i]
+  }
 
   function sort(arr) {
     var sorted = false;
     sorted = isSorted(arr);
+    i = 0
     while (!sorted) {
-      arr = shuffle(arr);
+      arr = fakeShuffle(i)
+      i++
+      //arr = shuffle(arr);
       sorted = isSorted(arr);
     }
     return arr;
