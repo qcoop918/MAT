@@ -41,7 +41,7 @@ function Bogosort(arr) {
     return arr;
   }
   function fakeShuffle(i){
-    if(i<100){
+    if(i<1000){
       arr = [1,0]
       for(let i = 0; i < 2000; i++){
         arr.push[i]
@@ -49,6 +49,9 @@ function Bogosort(arr) {
     }
     else{
       arr = [0,1]
+      for(let i = 0; i < 2000; i++){
+        arr.push[i]
+      }
     }
     return arr
   }
