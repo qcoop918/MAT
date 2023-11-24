@@ -66,10 +66,8 @@ function Bogosort(arr) {
   function sort(arr) {
     var sorted = false;
     sorted = isSorted(arr);
-    i = 0
     while (!sorted) {
-      arr = shuffle(i)
-      i++
+      arr = shuffle(arr)
       //arr = fakeShuffle(arr);
       sorted = isSorted(arr);
     }
