@@ -40,30 +40,30 @@ function Bogosort(arr) {
 
     return arr;
   }
-  function fakeShuffle(l){
-    if(l<200){
-      arr = [1,0]
-      for(let i = 0; i < 2000; i++){
-        arr.push[i]
-      }
-    }
-    else{
-      arr = [0,1]
-      for(let i = 0; i < 2000; i++){
-        arr.push[i]
-      }
-    }
-    return arr
-  }
+  // function fakeShuffle(l){
+  //   if(l<200){
+  //     arr = [1,0]
+  //     for(let i = 0; i < 2000; i++){
+  //       arr.push[i]
+  //     }
+  //   }
+  //   else{
+  //     arr = [0,1]
+  //     for(let i = 0; i < 2000; i++){
+  //       arr.push[i]
+  //     }
+  //   }
+  //   return arr
+  // }
 
   function sort(arr) {
     var sorted = false;
     sorted = isSorted(arr);
     i = 0
     while (!sorted) {
-      arr = fakeShuffle(i)
+      arr = shuffle(i)
       i++
-      //arr = shuffle(arr);
+      //arr = fakeShuffle(arr);
       sorted = isSorted(arr);
     }
     return arr;
@@ -72,7 +72,7 @@ function Bogosort(arr) {
   return sort(arr);
 }
 
-var seed = 3000;
+var seed = 1;
 function random() {
   var x = Math.sin(seed++) * 10000;
   return x - Math.floor(x);
