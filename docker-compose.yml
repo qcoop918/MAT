@@ -2,6 +2,7 @@ version: "3"
 
 services:
   entry:
+    cpuset: "7"
     container_name: mat_entry
     build: "./Entry"
     ports:
@@ -15,6 +16,7 @@ services:
           cpus: "0.1"
           memory: 0.5G
   bogo:
+    cpuset: "8"
     build: "./Bogo"
     container_name: mat_bogo
     ports:
@@ -22,12 +24,13 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.1"
+          cpus: "1"
           memory: 1G
         reservations:
           cpus: "0.05"
           memory: 0.5G
   bubble:
+    cpuset: "9"
     build: "./Bubble"
     container_name: mat_bubble
     ports:
@@ -35,12 +38,13 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.1"
+          cpus: "1"
           memory: 1G
         reservations:
           cpus: "0.05"
           memory: 0.5G
   writereaddelete:
+    cpuset: "10"
     build: "./WriteReadDelete"
     container_name: mat_write
     ports:
