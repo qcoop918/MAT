@@ -9,10 +9,16 @@ app.get("/bogo", function (req, res) {
   }
   else {
     //var arra = [3, 0, 2, 5, -1, 4, 1];
-    var arra = [7,1,2,3,4,5,6,3,-1,3,4,9,5,3,0,2,5,-1,4,1];
+    //var arra = [7,1,2,3,4,5,6,3,-1,3,4,9,5,3,0,2,5,-1,4,1];
+    var arra = []
+    count = 0
+    while(count < 100){
+      arra.push(random())
+      count++
+    }
     //res.send('Authorized Account Number: ' + Math.random()*1000 );
     //res.send("Original Array Elements: " + arra );
-    res.send("Seed: " + seed + " Sorted Array Elements: " + Bogosort(arra))
+    res.send("Seed: " + seed + " Original Elements: " + arra + " Sorted Array Elements: " + Bogosort(arra))
   }
 });
 
