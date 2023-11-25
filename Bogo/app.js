@@ -12,7 +12,7 @@ app.get("/bogo", function (req, res) {
     //var arra = [7,1,2,3,4,5,6,3,-1,3,4,9,5,3,0,2,5,-1,4,1];
     var arra = []
     count = 0
-    while(count < 7){
+    while(count < 8){
       arra.push(random())
       count++
     }
