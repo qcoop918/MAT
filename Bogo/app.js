@@ -18,8 +18,8 @@ app.get("/bogo", function (req, res) {
     }
     //res.send('Authorized Account Number: ' + Math.random()*1000 );
     //res.send("Original Array Elements: " + arra );
-    res.set("Connection", "close");
     res.send("Seed: " + seed + " Original Elements: " + arra + " Sorted Array Elements: " + Bogosort(arra))
+    seed = 1
   }
 });
 
